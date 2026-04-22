@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #0f0f10;
+    color: #eaeaea;
+}
+
+/* Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    background: #111;
+    border-bottom: 1px solid #222;
+}
+
+header h1 {
+    color: #ffffff;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #aaa;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #cdb4db; /* soft accent */
+}
+
+/* Hero */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 60px;
+    background: linear-gradient(135deg, #0f0f10, #1a1a1d);
+}
+
+/* Text kiri */
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-text h2 {
+    font-size: 42px;
+    line-height: 1.3;
+}
+
+.hero-text span {
+    color: #cdb4db; /* soft pink-purple */
+}
+
+.hero-text p {
+    margin: 20px 0;
+    color: #aaa;
+}
+
+/* Button */
+.hero-text button {
+    padding: 12px 25px;
+    border: none;
+    background: #cdb4db;
+    color: black;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.hero-text button:hover {
+    background: #ffc8dd;
+}
+
+/* Card */
+.hero-card {
+    margin-top: 30px;
+    background: #1a1a1d;
+    padding: 20px;
+    border-radius: 12px;
+    width: 320px;
+    border: 1px solid #2a2a2d;
+}
+
+/* Image kanan */
+.hero-image img {
+    width: 320px;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 3px solid #1f1f22;
+}
+
+/* Section */
+section {
+    padding: 60px;
+    text-align: center;
+}
+
+/* Project Grid */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* Card */
+.card {
+    background: #1a1a1d;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: left;
+    border: 1px solid #2a2a2d;
+    transition: 0.2s;
+}
+
+.card:hover {
+    border-color: #cdb4db;
+}
+
+/* Contact */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    background: #111;
+    color: white;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #cdb4db;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+}
+
+/* ===== HOBBY (SMALLER & CLEAN) ===== */
+.hobby-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.hobby-card {
+    background: #1a1a1d;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #2a2a2d;
+    width: 220px; /* diperkecil */
+    transition: 0.2s;
+}
+
+.hobby-card:hover {
+    border-color: #cdb4db;
+}
+
+.hobby-card img {
+    width: 100%;
+    height: 140px; /* lebih kecil */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.hobby-card p {
+    color: #aaa;
+    font-size: 12px; /* diperkecil */
+    line-height: 1.4;
+}
+/* PROJECT IMAGE */
+.card img {
+    width: 100%;
+    height: 180px; /* ukuran seragam */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Hi, there!</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Project</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+
+    <!-- Kiri -->
+    <div class="hero-text">
+        <h2>
+            This is me, Amanda <br>
+            <span>Your Future Engineer</span>
+        </h2>
+
+        <p>
+            Saya adalah mahasiswa Teknik Pengolahan Limbah yang
+            sedang belajar dan berkembang di bidang lingkungan,
+            dengan tujuan menjadi Engineer dan konsultan lingkungan. Melalui website ini
+            kalian akan mengetahui apa saja yang saya suka
+            dan apa saja yang sudah saya lakukan.
+        </p>
+
+        <button>Explore More</button>
+
+        <div class="hero-card">
+            <strong>About Me</strong>
+            <p>Saya adalah mahasiswa Teknik Pengolahan Limbah, Saat ini 
+            saya sedang mengembangkan kemampuan dalam memahami permasalahan 
+            lingkungan serta mencari solusi yang inovatif. Selain itu, saya 
+            juga memiliki minat dalam menulis dan membuat website sederhana 
+            sebagai sarana untuk mengekspresikan ide dan proses belajar saya.</p>
+        </div>
+    </div>
+
+    <!-- Kanan (foto kamu) -->
+    <div class="hero-image">
+        <img src="foto profile portofolio.jpeg" alt="Profile">
+    </div>
+
+</section>
+<!-- HOBBY SECTION (TARUH DI SINI) -->
+<section class="hobby">
+
+    <h2>My Hobbies</h2>
+
+    <div class="hobby-container">
+
+        <div class="hobby-card">
+            <img src="foto gunung 1.jpeg" alt="Hiking 1">
+            <p>
+                Hiking 1
+                Sarah Kelopo.
+            </p>
+        </div>
+
+        <div class="hobby-card">
+            <img src="foto gunung 2.jpeg" alt="Hiking 2">
+            <p>
+                Hiking 2
+                Puncak Bayangan Gunung Penanggungan.
+            </p>
+        </div>
+
+         <!-- Basket -->
+        <div class="hobby-card">
+            <img src="WhatsApp%20Image%202026-04-20%20at%2015.19.57.jpeg">
+            <p>Bermain basket.</p>
+        </div>
+
+        <!-- Menulis -->
+        <div class="hobby-card">
+            <img src="buku.jpeg" alt="Menulis">
+            <p>Menulis.</p>
+        </div>
+
+    </div>
+
+
+    </div>
+
+<section>
+    <h2>Projects</h2>
+
+    <div class="projects">
+
+        <div class="card">
+            <img src="novel1.jpeg" alt="Project 1">
+            <h3>Penulis</h3>
+            <p>Menjadi penulis dari buku yang berjudul Crazy Rich Boyfriend
+                dan berkerja sama dengan Universe Publisher.
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="novel2.jpeg" alt="Project 2">
+            <h3>Penulis</h3>
+            <p>Menjadi penulis dari buku yang berjudul Uji Nyali 
+                dan bekerja sama dengan Pure Publisher. 
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="websitess.png" alt="Project 3">
+            <h3>Portfolio Website</h3>
+            <p>Membuat website portfolio dengan desain modern dan clean.</p>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h2>Contact</h2>
+
+    <div class="card" style="max-width:400px;margin:auto;">
+        <input type="text" placeholder="Nama">
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Pesan"></textarea>
+        <button style="margin-top:15px;">Kirim</button>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Portfolio</p>
+</footer>
+
+</body>
+</html>
